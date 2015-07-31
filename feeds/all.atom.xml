@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rohit Gupta</title><link href="http://rohit-gupta.github.io/" rel="alternate"></link><link href="http://rohit-gupta.github.io/feeds/all.atom.xml" rel="self"></link><id>http://rohit-gupta.github.io/</id><updated>2015-07-31T05:20:00+05:30</updated><entry><title>Installing Theano with CUDA on Linux Mint 17.2</title><link href="http://rohit-gupta.github.io/installing-theano-with-cuda-on-linux-mint-172.html" rel="alternate"></link><updated>2015-07-31T05:20:00+05:30</updated><author><name>Rohit Gupta</name></author><id>tag:rohit-gupta.github.io,2015-07-31:installing-theano-with-cuda-on-linux-mint-172.html</id><summary type="html">&lt;h3&gt;Install Theano dependencies from the Ubuntu repos&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;sudo apt-get install python-numpy python-scipy python-dev python-pip python-nose g++ libopenblas-dev git&lt;/code&gt;&lt;/p&gt;
+&lt;h3&gt;Install Theano via pip&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;sudo pip install Theano&lt;/code&gt;&lt;/p&gt;
+&lt;h3&gt;(Optional) Test if Theano is working by running the following command:&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;python `python -c "import os, theano; print os.path.dirname(theano.__file__)"`/misc/check_blas.py&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Note the run time, which cab be found out using &lt;code&gt;$(!!) | grep -i "Total execution time:"&lt;/code&gt;&lt;/p&gt;
+&lt;h3&gt;Install the latest Nvidia drivers for your GPU from Menu &amp;gt; Driver Manager&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="Linux Mint Driver Manager" src="http://i.imgur.com/TQCvFwE.png" /&gt;&lt;/p&gt;
+&lt;h3&gt;Install CUDA&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Download repository meta-data deb package from Nvidia: &lt;a href="http://developer.download.nvidia.com/compute/cuda/7_0/Prod/local_installers/rpmdeb/cuda-repo-ubuntu1404-7-0-local_7.0-28_amd64.deb"&gt;http://developer.download.nvidia.com/compute/cuda/7_0/Prod/local_installers/rpmdeb/cuda-repo-ubuntu1404-7-0-local_7.0-28_amd64.deb&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Install the repository meta-data:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;sudo dpkg -i cuda-repo-ubuntu1404-7-0-local_7.0-28_amd64.deb&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Update the Apt repository cache&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;sudo apt-get update&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Install CUDA&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;sudo apt-get install cuda&lt;/code&gt;&lt;/p&gt;
+&lt;h3&gt;Add the CUDA libraries to your environment:&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;export PATH=/usr/local/cuda-7.0/bin:$PATH&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;export LD_LIBRARY_PATH=/usr/local/cuda-7.0/lib64:$LD_LIBRARY_PATH&lt;/code&gt;&lt;/p&gt;
+&lt;h3&gt;(Optional) Run the test in Step #3 again to verify that Theano is indeed able to use the GPU (a speed up of 10x or more is likely):&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;python `python -c "import os, theano; print os.path.dirname(theano.__file__)"`/misc/check_blas.py | grep -i "Total execution time:"&lt;/code&gt;&lt;/p&gt;</summary><category term="theano"></category><category term="guide"></category></entry></feed>

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
         <meta charset="utf-8" />
-        <title>Rohit Gupta</title>
+        <title>Installing Theano with CUDA on Linux Mint 17.2</title>
         <link rel="stylesheet" href="/theme/css/main.css" />
 
         <!--[if IE]>
@@ -14,13 +14,18 @@
         <header id="banner" class="body">
                 <h1><a href="/">Rohit Gupta </a></h1>
                 <nav><ul>
-                    <li><a href="/category/tutorial.html">Tutorial</a></li>
+                    <li class="active"><a href="/category/tutorial.html">Tutorial</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/installing-theano-with-cuda-on-linux-mint-172.html" rel="bookmark"
+           title="Permalink to Installing Theano with CUDA on Linux Mint 17.2">Installing Theano with CUDA on Linux Mint 17.2</a></h1>
+    </header>
 
-            <aside id="featured" class="body">
-                <article>
-                    <h1 class="entry-title"><a href="/installing-theano-with-cuda-on-linux-mint-172.html">Installing Theano with CUDA on Linux Mint 17.2</a></h1>
+    <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2015-07-31T05:20:00+05:30">
                 Published: Fri 31 July 2015
@@ -31,7 +36,7 @@
         </address>
 <p>In <a href="/category/tutorial.html">Tutorial</a>.</p>
 <p>tags: <a href="/tag/theano.html">theano</a> <a href="/tag/guide.html">guide</a> </p>
-</footer><!-- /.post-info --><h3>Install Theano dependencies from the Ubuntu repos</h3>
+</footer><!-- /.post-info -->      <h3>Install Theano dependencies from the Ubuntu repos</h3>
 <p><code>sudo apt-get install python-numpy python-scipy python-dev python-pip python-nose g++ libopenblas-dev git</code></p>
 <h3>Install Theano via pip</h3>
 <p><code>sudo pip install Theano</code></p>
@@ -62,8 +67,11 @@
 <p><code>export PATH=/usr/local/cuda-7.0/bin:$PATH</code></p>
 <p><code>export LD_LIBRARY_PATH=/usr/local/cuda-7.0/lib64:$LD_LIBRARY_PATH</code></p>
 <h3>(Optional) Run the test in Step #3 again to verify that Theano is indeed able to use the GPU (a speed up of 10x or more is likely):</h3>
-<p><code>python `python -c "import os, theano; print os.path.dirname(theano.__file__)"`/misc/check_blas.py | grep -i "Total execution time:"</code></p>                </article>
-            </aside><!-- /#featured -->
+<p><code>python `python -c "import os, theano; print os.path.dirname(theano.__file__)"`/misc/check_blas.py | grep -i "Total execution time:"</code></p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
         <section id="extras" class="body">
                 <div class="blogroll">
                         <h2>blogroll</h2>
