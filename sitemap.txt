@@ -1,0 +1,16 @@
+/index.html
+/archives.html
+/tags.html
+/categories.html
+/
+/archives.html
+/tags.html
+/categories.html
+/hindi-english-parallel-corpus-generation-from-comparable-corpora-for-neural-machine-translation.html
+/installing-theano-with-cuda-on-linux-mint-172.html
+/category/projects.html
+/category/thesis.html
+/tag/deep-learning.html
+/tag/tutorial.html
+/tag/projects.html
+/author/rohit-gupta.html
