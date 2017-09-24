@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
         <meta charset="utf-8" />
-        <title>Rohit Gupta</title>
+        <title>Rohit's Blog</title>
         <link rel="stylesheet" href="/theme/css/main.css" />
 
         <!--[if IE]>
@@ -12,15 +12,99 @@
 
 <body id="index" class="home">
         <header id="banner" class="body">
-                <h1><a href="/">Rohit Gupta </a></h1>
+                <h1><a href="/">Rohit's Blog </a></h1>
                 <nav><ul>
-                    <li><a href="/category/tutorial.html">Tutorial</a></li>
+                    <li><a href="/category/projects.html">Projects</a></li>
+                    <li><a href="/category/thesis.html">Thesis</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="/installing-theano-with-cuda-on-linux-mint-172.html">Installing Theano with CUDA on Linux Mint 17.2</a></h1>
+                    <h1 class="entry-title"><a href="/hindi-english-parallel-corpus-generation-from-comparable-corpora-for-neural-machine-translation.html">Hindi ↔ English Parallel Corpus Generation from Comparable Corpora for Neural Machine Translation</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2015-12-03T12:45:00+05:30">
+                Published: Thu 03 December 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/rohit-gupta.html">Rohit Gupta</a>
+        </address>
+<p>In <a href="/category/projects.html">Projects</a>.</p>
+<p>tags: <a href="/tag/deep-learning.html">Deep Learning</a> <a href="/tag/projects.html">Projects</a> </p>
+</footer><!-- /.post-info --><p>Neural Machine Translation (NMT) is a new approach to the well-studied task of machine translation, which has significant advantages over traditional approaches in terms of reduced model size, and better performance. NMT models require a parallel corpus of significant size to be trained, which is lacking for the Hindi ↔ English language pair. However, significant amounts of comparable corpora are available. The aim of this project is to develop a technique to produce a high quality parallel sentence-aligned corpus from existing subject/document-aligned comparable corpora (Wikipedia).</p>
+<h1>Parallel Corpus Generation</h1>
+<h2>Parallel and Comparable Corpus</h2>
+<p>Large collections of parallel texts are called parallel corpora. Alignments of parallel corpora at sentence level are prerequisite for many areas of linguistic research. During translation, sentences can be split, merged, deleted, inserted or reordered by the translator. This makes alignment a non-trivial task.</p>
+<p>A comparable corpus is built from non-sentence-aligned and untranslated bilingual documents,
+but the documents are topic-aligned.</p>
+<h2>Our Methodology</h2>
+<p><img alt="Parallel corpus alignment schematic" src="https://i.imgur.com/GpyBRCu.png"></p>
+<ol>
+<li>We train a weak translator using the limited parallel corpus available. (Note: An alternative pre-trained weak translator can be used directly as well)</li>
+<li>Assuming we have a corpus X and its comparable counterpart Y, we use this weak translator to translate X into Y’s language yielding a corpus Z.</li>
+<li>An aligner (hunalign/LFAlign/fuzzywuzzy aligner based on our Token sort ratio Heuristic) is used to match the concepts within sentences in Z to the concepts within sentences in Y.</li>
+<li>From step 4 we get as outputs matching pairs of sentences in Y and Z (both in the same language, of course). For instance, if Y had sentences from Y<sub>1</sub>, Y<sub>2</sub>, . . . , Y<sub>N</sub> while Z had sentences from Z<sub>1</sub>, Z<sub>2</sub>,. . . , Z<sub>M</sub>, the aligner produces sentence pairs:{Y<sub>a</sub>, Z<sub>b</sub>}, {Y<sub>c</sub>, Z<sub>d</sub>}, . . . , {Y<sub>i</sub>, Z<sub>j</sub>}.</li>
+<li>Sentences in {Y<sub>i</sub>,Z<sub>j</sub>} pairs above are mapped back to their counterparts in X and we get pairs {Y<sub>p</sub>, X<sub>q</sub>}, {Y<sub>r</sub>, X<sub>s</sub>}, . . . , {Y<sub>i</sub>, X<sub>j</sub>}. The parallel corpus is now ready free of any noise associated with translation.</li>
+</ol>
+<h1>Neural Machine Translation</h1>
+<p>NMT is a new approach for statistical machine translation based purely on neural networks.  All the neural network models used in (Sutskever et al., 2014; Cho et al., 2014) consist of an encoder and a decoder. The encoder extracts a fixed-length vector representation from a variable length input sentence, and from this representation the decoder generates a correct, variable length target translation. </p>
+<p><img alt="IIlustration of NMT" src="https://i.imgur.com/Ygqly8P.png"></p>
+<h1>Results</h1>
+<h2>Parallel corpus generation results</h2>
+<p>At test time 600 article pairs were used to generate sentence pairs. About 1500 matching sentence pairs were generated after putting a reasonably high threshold in the aligner parameters for finding high quality matches. In order to evaluate the quality of the generated corpora we sampled 100 of those pairs and got them rated by 6 different human evaluators. </p>
+<p>The evaluators rated them on a 3 point scale with the following levels:</p>
+<p><strong>Perfect</strong> When a sentence pair is fit to be included in Hindi-English parallel corpora</p>
+<p><strong>Acceptable</strong> Contains minor anomalies and would not be included in a high quality parallel corpora</p>
+<p><strong>Rejected</strong> Contains a lot of noise and not useful in training translation models at all</p>
+<table>
+<thead>
+<tr>
+<th>Classification</th>
+<th>% of sample</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Perfect</td>
+<td>77%</td>
+</tr>
+<tr>
+<td>Acceptable</td>
+<td>15%</td>
+</tr>
+<tr>
+<td>Rejected</td>
+<td>8%</td>
+</tr>
+</tbody>
+</table>
+<h2>Neural Machine Translation Results</h2>
+<p>Results for Translaion will be updated soon</p>
+<h1>Code</h1>
+<p><a href="https://github.com/rohit-gupta/babelfish">Github Repo</a></p>
+<h1>References</h1>
+<ol>
+<li><strong>Kalchbrenner and Blunsom</strong>, <em>Recurrent Continuous Translation Models</em>, 2013</li>
+<li><strong>Sutskever et al</strong>, <em>Sequence to Sequence Learning with Neural Networks</em>, 2014</li>
+<li><strong>Cho et al</strong>, <em>On the Properties of Neural Machine Translation: Encoder–Decoder Approaches</em>, 2014</li>
+<li><strong>Hermann and Blunsom</strong>, <em>Multilingual Distributed Representations without Word Alignment</em>, 2014</li>
+<li><strong>Cho et al</strong>, <em>Neural Machine Translation by jointly learning to align and translate</em>, ICLR 2015</li>
+<li><strong>Wolk and Marasek</strong>, <em>Building subject aligned comparable corpora and mining it for truly parallel sentence pairs</em>, 2014</li>
+</ol>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/installing-theano-with-cuda-on-linux-mint-172.html" rel="bookmark"
+                           title="Permalink to Installing Theano with CUDA on Linux Mint 17.2">Installing Theano with CUDA on Linux Mint 17.2</a></h1>
+                </header>
+
+                <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2015-07-31T05:20:00+05:30">
                 Published: Fri 31 July 2015
@@ -29,49 +113,22 @@
         <address class="vcard author">
                 By                         <a class="url fn" href="/author/rohit-gupta.html">Rohit Gupta</a>
         </address>
-<p>In <a href="/category/tutorial.html">Tutorial</a>.</p>
-<p>tags: <a href="/tag/theano.html">theano</a> <a href="/tag/guide.html">guide</a> </p>
-</footer><!-- /.post-info --><h3>Install Theano dependencies from the Ubuntu repos</h3>
-<p><code>sudo apt-get install python-numpy python-scipy python-dev python-pip python-nose g++ libopenblas-dev git</code></p>
-<h3>Install Theano via pip</h3>
-<p><code>sudo pip install Theano</code></p>
-<h3>(Optional) Test if Theano is working by running the following command:</h3>
-<p><code>python `python -c "import os, theano; print os.path.dirname(theano.__file__)"`/misc/check_blas.py</code></p>
-<p>Note the run time, which cab be found out using <code>$(!!) | grep -i "Total execution time:"</code></p>
-<h3>Install the latest Nvidia drivers for your GPU from Menu &gt; Driver Manager</h3>
-<p><img alt="Linux Mint Driver Manager" src="http://i.imgur.com/TQCvFwE.png" /></p>
-<h3>Install CUDA</h3>
-<ul>
-<li>
-<p>Download repository meta-data deb package from Nvidia: <a href="http://developer.download.nvidia.com/compute/cuda/7_0/Prod/local_installers/rpmdeb/cuda-repo-ubuntu1404-7-0-local_7.0-28_amd64.deb">http://developer.download.nvidia.com/compute/cuda/7_0/Prod/local_installers/rpmdeb/cuda-repo-ubuntu1404-7-0-local_7.0-28_amd64.deb</a></p>
-</li>
-<li>
-<p>Install the repository meta-data:</p>
-</li>
-</ul>
-<p><code>sudo dpkg -i cuda-repo-ubuntu1404-7-0-local_7.0-28_amd64.deb</code></p>
-<ul>
-<li>Update the Apt repository cache</li>
-</ul>
-<p><code>sudo apt-get update</code></p>
-<ul>
-<li>Install CUDA</li>
-</ul>
-<p><code>sudo apt-get install cuda</code></p>
-<h3>Add the CUDA libraries to your environment:</h3>
-<p><code>export PATH=/usr/local/cuda-7.0/bin:$PATH</code></p>
-<p><code>export LD_LIBRARY_PATH=/usr/local/cuda-7.0/lib64:$LD_LIBRARY_PATH</code></p>
-<h3>(Optional) Run the test in Step #3 again to verify that Theano is indeed able to use the GPU (a speed up of 10x or more is likely):</h3>
-<p><code>python `python -c "import os, theano; print os.path.dirname(theano.__file__)"`/misc/check_blas.py | grep -i "Total execution time:"</code></p>                </article>
-            </aside><!-- /#featured -->
+<p>In <a href="/category/thesis.html">Thesis</a>.</p>
+<p>tags: <a href="/tag/deep-learning.html">Deep Learning</a> <a href="/tag/tutorial.html">Tutorial</a> </p>
+</footer><!-- /.post-info -->                <p>How-to install the Theano deep-learning library</p>
+                <a class="readmore" href="/installing-theano-with-cuda-on-linux-mint-172.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+                </ol><!-- /#posts-list -->
+                </section><!-- /#content -->
         <section id="extras" class="body">
                 <div class="blogroll">
-                        <h2>blogroll</h2>
+                        <h2>links</h2>
                         <ul>
-                            <li><a href="http://getpelican.com/">Pelican</a></li>
-                            <li><a href="http://python.org/">Python.org</a></li>
-                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
-                            <li><a href="#">You can modify those links in your config file</a></li>
+                            <li><a href="https://www.cse.iitk.ac.in/users/sigml/">SIGML IIT Kanpur</a></li>
+                            <li><a href="https://www.cse.iitk.ac.in/users/vision/">Computer Vision @ CSE IIT Kanpur</a></li>
+                            <li><a href="https://keras.io/">Keras</a></li>
+                            <li><a href="https://www.linuxmint.com/">Linux Mint</a></li>
                         </ul>
                 </div><!-- /.blogroll -->
                 <div class="social">
