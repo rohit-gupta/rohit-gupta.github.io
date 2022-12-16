@@ -1,1 +1,239 @@
-Hello World
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>Rohit Gupta</title>
+
+    <meta name="author" content="Rohit Gupta">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <link rel="icon"
+          href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>">
+</head>
+
+<body>
+<table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+    <tbody>
+    <tr style="padding:0px">
+        <td style="padding:0px">
+            <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+                <tbody>
+                <tr style="padding:0px">
+                    <td style="padding:2.5%;width:63%;vertical-align:middle">
+                        <p style="text-align:center">
+                            <name>Rohit Gupta</name>
+                        </p>
+                        <p>I am a Ph.D. Student focusing on Computer Vision at the <a href="https://www.crcv.ucf.edu/">Center for
+                            Research in Computer Vision</a> at <a href="https://www.ucf.edu/">University of Central Florida</a>.
+                            My research is advised by <a href="https://www.crcv.ucf.edu/person/mubarak-shah/">Prof. Mubarak Shah</a>.
+
+                            Previously, I completed my Bachelor of Technology (B.Tech) and Master of Technology (M. Tech)
+                            degrees at <a href="https://www.iitk.ac.in/">IIT Kanpur</a>. My Masters thesis was supervised by
+                            <a href="https://vinaypn.github.io/"> Dr Vinay Namboodiri</a>.
+                        </p>
+
+                        <p style="text-align:center">
+                            Email: rohit g [no spaces] [at] knights [dot] ucf [dot] edu <br>
+                            <a href="data/RohitGupta_resume.pdf">CV</a> &nbsp/&nbsp
+                            <a href="https://scholar.google.com/citations?hl=en&user=0WukQpMAAAAJ">Google Scholar</a>
+                            &nbsp/&nbsp
+                            <a href="https://twitter.com/rohitgUCF">Twitter</a> &nbsp;/&nbsp;
+                            <a href="https://github.com/rohit-gupta">Github</a>
+                        </p>
+                    </td>
+                    <td style="padding:2.5%;width:40%;max-width:40%">
+                        <a href="images/photo.png"><img style="width:100%;max-width:100%" alt="profile photo"
+                                                            src="images/photo.png" class="hoverZoomLink"></a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+                <tbody>
+                <tr>
+                    <td style="padding:20px;width:100%;vertical-align:middle">
+                        <heading>Research</heading>
+                        <p>
+                            Within the broad field of computer vision, I am particularly interested in
+                            robustness &amp; generalization, self-supervised learning and multi-modal learning. &nbsp; My Ph.D.
+                            research focuses on learning robust representations for images and videos using limited
+                            supervision.
+
+                            &nbsp; My Masters thesis was focused on automated generation of video descriptions.
+                        </p>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+                <tbody>
+
+
+
+                <tr onmouseout="advssl_stop()" onmouseover="advssl_start()">
+                    <td style="padding:20px;width:25%;vertical-align:middle">
+                        <div class="one">
+                            <div class="two" id='advssl_image'>
+                                <img src='images/adv_ssl.png' width="160">
+                            </div>
+                            <img src='images/adv_ssl.png' width="160">
+                        </div>
+                        <script type="text/javascript">
+                            function advssl_start() {
+                                document.getElementById('advssl_image').style.opacity = "1";
+                            }
+
+                            function advssl_stop() {
+                                document.getElementById('advssl_image').style.opacity = "0";
+                            }
+
+                            advssl_stop()
+                        </script>
+                    </td>
+                    <td style="padding:20px;width:75%;vertical-align:middle">
+                            <papertitle>
+                                Contrastive Self-Supervised Learning Leads to Higher Adversarial Susceptibility
+                            </papertitle>
+
+                        <br>
+                        <strong>Rohit Gupta</strong>,
+                        <a href="">Naveed Akhtar</a>,
+                        <a href="">Ajmal Mian</a>,
+                        <a href="">Mubarak Shah</a>
+                        <br>
+                        <em>AAAI</em>, 2023 (to appear)
+                        <br>
+<!--                        <a href="http://yenchenlin.me/nerf-supervision/">project page</a> /-->
+                        <a href="https://arxiv.org/abs/2207.10862">arXiv</a> /
+<!--                        <a href="https://www.youtube.com/watch?v=_zN-wVwPH1s">video</a> /-->
+                        <a href="https://github.com/rohit-gupta/">code (coming soon)</a>
+<!--                        <a href="https://colab.research.google.com/drive/13ISri5KD2XeEtsFs25hmZtKhxoDywB5y?usp=sharing">colab</a>-->
+                        <p></p>
+                        <p>Contrastive Self-Supervised Learning (CSL) results in significantly lower adversarial robustness
+                            than supervised learning, even while achieving similar accuracy on clean data. We establish this
+                            through extensive experiments and provide evidence to suggest that the lower robustness is caused
+                        by presence of false negative pairs during CSL training.</p>
+                    </td>
+                </tr>
+
+
+                <tr onmouseout="tclr_stop()" onmouseover="tclr_start()">
+                    <td style="padding:20px;width:25%;vertical-align:middle">
+                        <div class="one">
+                            <div class="two" id='tclr_image'>
+                                <img src='images/tclr.png' width="160">
+<!--                                <video width=100% height=100% muted autoplay loop>-->
+<!--                                    <source src="images/.mp4" type="video/mp4">-->
+<!--                                    Your browser does not support the video tag.-->
+<!--                                </video>-->
+                            </div>
+                            <img src='images/tclr.png' width="160">
+                        </div>
+                        <script type="text/javascript">
+                            function tclr_start() {
+                                document.getElementById('tclr_image').style.opacity = "1";
+                            }
+
+                            function tclr_stop() {
+                                document.getElementById('tclr_image').style.opacity = "0";
+                            }
+
+                            tclr_stop()
+                        </script>
+                    </td>
+                    <td style="padding:20px;width:75%;vertical-align:middle">
+                            <papertitle>
+                                TCLR: Temporal Contrastive Learning for Video Representation
+                            </papertitle>
+
+                        <br>
+                        <a href="https://scholar.google.co.in/citations?user=fWu6sFgAAAAJ&hl=en">Ishan Dave</a>,
+                        <strong>Rohit Gupta</strong>,
+                        <a href="https://nayeemrizve.github.io/">Mamshad Nayeem Rizve</a>,
+                        <a href="https://www.crcv.ucf.edu/person/mubarak-shah/">Mubarak Shah</a>
+                        <br>
+                        <em>CVIU</em> 219, June 2022
+                        <br>
+<!--                        <a href="http://yenchenlin.me/nerf-supervision/">project page</a> /-->
+                        <a href="https://arxiv.org/abs/2101.07974">arXiv</a> /
+<!--                        <a href="https://www.youtube.com/watch?v=_zN-wVwPH1s">video</a> /-->
+                        <a href="https://github.com/DAVEISHAN/TCLR">code</a>
+<!--                        <a href="https://colab.research.google.com/drive/13ISri5KD2XeEtsFs25hmZtKhxoDywB5y?usp=sharing">colab</a>-->
+                        <p></p>
+                        <p>Unlike images, videos contain significant temporal variation in motion and appearance.
+                            Hence simple extensions of Contrastive Self-Supervised Learning (CSL) to videos fail to
+                        capture temporal distinctiveness in the representation. We propose Temporal Contrastive Losses and
+                        learn temporally distinct representations and achieve significant gains on downstream video tasks.</p>
+                    </td>
+                </tr>
+
+
+
+
+
+                </tbody>
+            </table>
+
+            <table width="100%" align="center" border="0" cellpadding="20">
+                <tbody>
+
+                <tr>
+                    <td align="center" style="padding:20px;width:25%;vertical-align:middle">
+                        <heading>Service</heading>
+                    </td>
+                    <td width="75%" valign="center">
+                        Reviewer, CVPR 2023
+                        <br>
+                        Reviewer, AAAI 2023
+                        <br>
+                        Reviewer, ECCV 2022
+                        <br>
+                        Reviewer, IEEE Journals: Neural Netw. Learn. Syst., Circuits Syst. Video Technol.
+                        <br>
+                        Mentor, NSF REU 2020 and 2022
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td align="center" style="padding:20px;width:25%;vertical-align:middle">
+                        <heading>Technical <br> Reports</heading>
+                    </td>
+                    <td width="75%" valign="middle">
+                        <a href="https://arxiv.org/abs/2110.07758">"Knights": First Place Submission for VIPriors21
+                            Action Recognition Challenge at ICCV 2021</a>
+                        <br>
+                        <a href="https://www.cse.iitk.ac.in/users/cs671/2015/_submissions/egupta/project/report.pdf">Hindi-English
+                            Parallel Corpus Generation from Comparable Corpora for Neural Machine Translation</a>
+                        <br>
+                        <a href="https://github.com/rohit-gupta/Video2Language/blob/master/Rohit_Gupta_Thesis__Public_Copy_.pdf">
+                            Video Description by Learning to Detect Visual Tags
+                        </a>
+                    </td>
+                </tr>
+
+
+                </tbody>
+            </table>
+            <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+                <tbody>
+                <tr>
+                    <td style="padding:0px">
+                        <br>
+                        <p style="text-align:right;font-size:small;">
+                            Built upon <a href="https://github.com/jonbarron/jonbarron_website">Jon Barron's</a>
+                            template.
+
+                        </p>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+</table>
+</body>
+
+</html>
