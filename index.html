@@ -69,6 +69,54 @@
             </table>
             <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
                 <tbody>
+                    
+                
+                <tr onmouseout="mlcont_stop()" onmouseover="mlcont_start()">
+                    <td style="padding:20px;width:25%;vertical-align:middle">
+                        <div class="one">
+                            <div class="two" id='mlcont_image'>
+                                <img src='images/mlcont.png' width="160">
+                            </div>
+                            <img src='images/mlcont.png' width="160">
+                        </div>
+                        <script type="text/javascript">
+                            function mlcont_start() {
+                                document.getElementById('mlcont_image').style.opacity = "1";
+                            }
+
+                            function mlcont_stop() {
+                                document.getElementById('mlcont_image').style.opacity = "0";
+                            }
+
+                            mlcont_stop()
+                        </script>
+                    </td>
+                    <td style="padding:20px;width:75%;vertical-align:middle">
+                            <papertitle>
+                                Class Prototypes based Contrastive Learning for Classifying Multi-Label and Fine-Grained Educational Videos
+                            </papertitle>
+
+                        <br>
+                        <strong>Rohit Gupta</strong>,
+                        <a href="https://scholar.google.com/citations?user=N9eSuR4AAAAJ&hl=en">Anirban Roy</a>,
+                        <a href="http://wwwx.cs.unc.edu/~sujeong/">Sujeong Kim</a>,
+                        <a href="https://www.sri.com/bios/claire-christensen/">Claire Christensen</a>,
+                        <a href="">...</a>,
+                        <a href="https://sites.google.com/view/ajaydivakaran/home">Ajay Divakaran</a>,
+                        <a href="https://www.crcv.ucf.edu/person/mubarak-shah/">Mubarak Shah</a>
+                        <br>
+                        <em>CVPR</em>, 2023 (to appear)
+                        <br>
+                        <a href="">arXiv (coming soon)</a> /
+                        <a href="https://github.com/rohit-gupta/">code (coming soon)</a>
+                        <p></p>
+                        <p>We propose Class Prototype Contrastive Learning to solve two key problems associated with practical Fine-grained Video 
+                        Classification: (a) Multi-Label nature of training data (b) Fusing information effectively across modalities. 
+                           Our method achieves strong results on the COIN and YouTube-8M datasets, and we also propose a novel video dataset 
+                            from the education domain with expert annotated labels, and designed such that understanding both video and speech
+                        is essential for effective classification.</p>
+                    </td>
+                </tr>
 
 
 
@@ -103,13 +151,10 @@
                         <a href="https://ajmalsaeed.net/">Ajmal Mian</a>,
                         <a href="https://www.crcv.ucf.edu/person/mubarak-shah/">Mubarak Shah</a>
                         <br>
-                        <em>AAAI</em>, 2023 (to appear)
+                        <em>AAAI</em>, 2023
                         <br>
-<!--                        <a href="http://yenchenlin.me/nerf-supervision/">project page</a> /-->
                         <a href="https://arxiv.org/abs/2207.10862">arXiv</a> /
-<!--                        <a href="https://www.youtube.com/watch?v=_zN-wVwPH1s">video</a> /-->
                         <a href="https://github.com/rohit-gupta/">code (coming soon)</a>
-<!--                        <a href="https://colab.research.google.com/drive/13ISri5KD2XeEtsFs25hmZtKhxoDywB5y?usp=sharing">colab</a>-->
                         <p></p>
                         <p>Contrastive Self-Supervised Learning (CSL) results in significantly lower adversarial robustness
                             than supervised learning, even while achieving similar accuracy on clean data. We establish this
