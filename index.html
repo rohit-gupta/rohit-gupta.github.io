@@ -69,7 +69,49 @@
             </table>
             <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
                 <tbody>
-                    
+                <tr onmouseout="ovvidcls_stop()" onmouseover="ovvidcls_start()">
+    <td style="padding:20px;width:25%;vertical-align:middle">
+        <div class="one">
+            <div class="two" id='ovvidcls_image'>
+                <img src='images/ovvidcls_cvpr2023.png' width="160">
+            </div>
+            <img src='images/ovvidcls_cvpr2023.png' width="160">
+        </div>
+        <script type="text/javascript">
+            function ovvidcls_start() {
+                document.getElementById('ovvidcls_image').style.opacity = "1";
+            }
+
+            function ovvidcls_stop() {
+                document.getElementById('ovvidcls_image').style.opacity = "0";
+            }
+
+            ovvidcls_stop()
+        </script>
+    </td>
+    <td style="padding:20px;width:75%;vertical-align:middle">
+            <papertitle>
+                Open Vocabulary Multi-Label Video Classification
+            </papertitle>
+
+        <br>
+        <strong>Rohit Gupta</strong>,
+        <a href="https://nayeemrizve.github.io/">Mamshad Nayeem Rizve</a>,
+        <a href="http://cvrr-nas.ucsd.edu/ashish/index.htm">Ashish Tawari</a>,
+        <a href="https://sites.google.com/site/signalsandstatistics">Jayakrishnan Unnikrishnan</a>,
+        <a href="https://scholar.google.com/citations?user=P0EbpmgAAAAJ&hl=en">Son Tran</a>,
+        <a href="https://www.crcv.ucf.edu/person/mubarak-shah/">Mubarak Shah</a>
+        <br>
+        (under review)
+        <br>
+        <a href="">Pre-print (available on request)</a> /
+        <a href="https://github.com/rohit-gupta/">code (coming soon)</a>
+        <p></p>
+        <p>Pre-trained vision-language models (VLMs) have enabled significant progress in open vocabulary computer vision tasks such as image classification, object detection and image segmentation. Some recent works have focused on extending VLMs to zero-shot single label action classification in videos. However, previous methods fall short in holistic video understanding which requires the ability to simultaneously recognize multiple actions and entities in the video in a zero-shot setting. We formulate this problem as open vocabulary multi-label video classification and propose a method to adapt a pre-trained VLM such as CLIP to solve this task. We leverage large language models (LLMs) to provide semantic guidance to the VLM about class labels to improve its open vocabulary performance with three key contributions. First, we propose an end-to-end trainable architecture that learns to prompt an LLM to generate soft attributes for the CLIP text-encoder to enable it to recognize novel classes. Second, we improve upon state of the art temporal modeling techniques for CLIP's vision encoder to enhance its zero-shot classification performance. Third, we propose a recipe for generating useful class labels from large unlabeled video datasets and demonstrate that models trained with the added synthetic labels further boosts open vocabulary classification performance. We demonstrate strong open vocabulary action and object recognition performance using a single model across multiple datasets.</p>
+    </td>
+</tr>
+
+
                 
                 <tr onmouseout="mlcont_stop()" onmouseover="mlcont_start()">
                     <td style="padding:20px;width:25%;vertical-align:middle">
