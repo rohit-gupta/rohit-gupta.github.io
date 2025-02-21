@@ -258,6 +258,44 @@
                         learn temporally distinct representations and achieve significant gains on downstream video tasks.</p>
                     </td>
                 </tr>
+             <tr onmouseout="rescuenet_stop()" onmouseover="rescuenet_start()">
+                <td style="padding:20px;width:25%;vertical-align:middle">
+                    <div class="one">
+                        <div class="two" id='rescuenet_image'>
+                            <img src='images/rescuenet.gif' width="200">
+                        </div>
+                        <img src='images/rescuenet_system.gif' width="200">
+                    </div>
+                    <script type="text/javascript">
+                        function rescuenet_start() {
+                            document.getElementById('rescuenet_image').style.opacity = "1";
+                        }
+
+                        function rescuenet_stop() {
+                            document.getElementById('rescuenet_image').style.opacity = "0";
+                        }
+
+                        tclr_stop()
+                    </script>
+                </td>
+                <td style="padding:20px;width:75%;vertical-align:middle">
+                        <papertitle>
+                            RescueNet: Joint Building Segmentation and Damage Assessment from Satellite Imagery
+                        </papertitle>
+
+                    <br>
+                    <strong>Rohit Gupta</strong>,
+                    <a href="https://www.crcv.ucf.edu/person/mubarak-shah/">Mubarak Shah</a>
+                    <br>
+                    <em>ICPR</em> 2020
+                    <br>
+                    <a href="https://arxiv.org/abs/2004.07312">arXiv</a> /
+                    <a href="https://ieeexplore.ieee.org/abstract/document/9412295">Paper</a>
+                    <p></p>
+                    <p>Accurate building damage assessment is crucial for effective Humanitarian Aid and Disaster Response (HADR) after natural disasters. Satellite and UAV imagery, often with computer vision, has been used for this task. Existing methods follow a two-stage approach—building detection and damage classification—which limits performance. We propose RescueNet, a unified, end-to-end trainable model that simultaneously segments buildings and assesses damage levels. To address the problem’s complexity, we introduce a localization-aware loss function combining Binary Cross Entropy for segmentation and a selective Categorical Cross-Entropy for classification. Tested on the large-scale xBD dataset, RescueNet outperforms existing methods, achieving better accuracy and generalization across regions and disaster types.</p>
+                </td>
+            </tr>
+
 
 
 
