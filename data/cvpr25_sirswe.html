@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Poster Sessions</title>
+  <style>
+    /* --- basic reset & fonts --- */
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #fafafa; }
+
+    /* --- tab bar --- */
+    .tabs {
+      display: flex;
+      overflow-x: auto;
+      background: #ececec;
+      border-bottom: 1px solid #ccc;
+    }
+    .tab-button {
+      flex: 1 0 auto;
+      padding: 12px 16px;
+      text-align: center;
+      font-size: 1rem;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .tab-button:focus { outline: none; }
+    .tab-button:hover { background: #e0e0e0; }
+    .tab-button.active {
+      background: #fff;
+      font-weight: 600;
+      border-bottom: 2px solid #007bff;
+    }
+
+    /* --- tab panels --- */
+    .tab-content { display: none; padding: 16px; }
+    .tab-content.active { display: block; }
+
+    /* --- responsive table --- */
+    table { width: 100%; border-collapse: collapse; }
+    th, td { padding: 8px 6px; text-align: left; border-bottom: 1px solid #ddd; font-size: 0.95rem; }
+    tr:hover { background: #f6f6f6; }
+
+    @media (max-width: 500px) {
+      th, td { font-size: 0.85rem; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Tab navigation -->
+  <nav class="tabs" role="tablist">
+    <button class="tab-button active" data-tab="session1" role="tab" aria-selected="true">Session&nbsp;1</button>
+    <button class="tab-button" data-tab="session2" role="tab" aria-selected="false">Session&nbsp;2</button>
+  </nav>
+
+  <!-- Session 1 table -->
+  <section id="session1" class="tab-content active" role="tabpanel">
+    <table>
+      <thead>
+        <tr><th>Poster #</th><th>Title</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>295</td><td>AVQACL: A Novel Benchmark for Audio-Visual Question Answering Continual Learning</td></tr>
+        <tr><td>296</td><td>Commonsense Video Question Answering through Video-Grounded Entailment Tree Reasoning</td></tr>
+        <tr><td>298</td><td>STEP: Enhancing Video-LLMs&#39; Compositional Reasoning by Spatio-Temporal Graph-guided Self-Training</td></tr>
+        <tr><td>300</td><td>PAVE: Patching and Adapting Video Large Language Models</td></tr>
+        <tr><td>301</td><td>BOLT: Boost Large Vision-Language Model Without Training for Long-form Video Understanding</td></tr>
+        <tr><td>306</td><td>VideoGEM: Training-free Action Grounding in Videos</td></tr>
+        <tr><td>337</td><td>SeeGround: See and Ground for Zero-Shot Open-Vocabulary 3D Visual Grounding</td></tr>
+        <tr><td>338</td><td>ReasonGrounder: LVLM-Guided Hierarchical Feature Splatting for Open-Vocabulary 3D Visual Grounding and Reasoning</td></tr>
+        <tr><td>340</td><td>Learning Visual Composition through Improved Semantic Guidance</td></tr>
+        <tr><td>342</td><td>LSceneLLM: Enhancing Large 3D Scene Understanding Using Adaptive Visual Preferences</td></tr>
+        <tr><td>348</td><td>Provoking Multi-modal Few-Shot LVLM via Exploration-Exploitation In-Context Learning</td></tr>
+        <tr><td>349</td><td>Perception Tokens Enhance Visual Reasoning in Multimodal Language Models</td></tr>
+        <tr><td>353</td><td>VisionArena: 230k Real World User-VLM Conversations with Preference Labels</td></tr>
+        <tr><td>356</td><td>FRAMES-VQA: Benchmarking Fine-Tuning Robustness across Multi-Modal Shifts in Visual Question Answering</td></tr>
+        <tr><td>373</td><td>FLAME: Frozen Large Language Models Enable Data-Efficient Language-Image Pre-training</td></tr>
+        <tr><td>375</td><td>VladVA: Discriminative Fine-tuning of LVLMs</td></tr>
+        <tr><td>383</td><td>Align-KD: Distilling Cross-Modal Alignment Knowledge for Mobile Vision-Language Large Model Enhancement</td></tr>
+        <tr><td>385</td><td>Stop Learning it all to Mitigate Visual Hallucination, Focus on the Hallucination Target.</td></tr>
+        <tr><td>390</td><td>Post-pre-training for Modality Alignment in Vision-Language Foundation Models</td></tr>
+        <tr><td>392</td><td>Adaptive Parameter Selection for Tuning Vision-Language Models</td></tr>
+        <tr><td>399</td><td>Query Efficient Black-Box Visual Prompting with Subspace Learning</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Session 2 table -->
+  <section id="session2" class="tab-content" role="tabpanel">
+    <table>
+      <thead>
+        <tr><th>Poster #</th><th>Title</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>252</td><td>VideoDPO: Omni-Preference Alignment for Video Diffusion Generation</td></tr>
+        <tr><td>294</td><td>MotionBench: Benchmarking and Improving Fine-grained Video Motion Understanding for Vision Language Models</td></tr>
+        <tr><td>295</td><td>VideoAutoArena: An Automated Arena for Evaluating Large Multimodal Models in Video Analysis through User Simulation</td></tr>
+        <tr><td>297</td><td>VidComposition: Can MLLMs Analyze Compositions in Compiled Videos?</td></tr>
+        <tr><td>298</td><td>VITED: Video Temporal Evidence Distillation</td></tr>
+        <tr><td>301</td><td>AdaCM^2: On Understanding Extremely Long-Term Video with Adaptive Cross-Modality Memory Reduction</td></tr>
+        <tr><td>303</td><td>HierarQ: Task-Aware Hierarchical Q-Former for Enhanced Video Understanding</td></tr>
+        <tr><td>305</td><td>Hybrid-Level Instruction Injection for Video Token Compression in Multi-modal Large Language Models</td></tr>
+        <tr><td>307</td><td>LLaVA-ST: A Multimodal Large Language Model for Fine-Grained Spatial-Temporal Understanding</td></tr>
+        <tr><td>311</td><td>Motion-Grounded Video Reasoning: Understanding and Perceiving Motion at Pixel Level</td></tr>
+        <tr><td>312</td><td>V<sup>2</sup>Dial: Unification of Video and Visual Dialog via Multimodal Experts</td></tr>
+        <tr><td>316</td><td>VERA: Explainable Video Anomaly Detection via Verbalized Learning of Vision-Language Models</td></tr>
+        <tr><td>347</td><td>Video-3D LLM: Learning Position-Aware Video Representation for 3D Scene Understanding</td></tr>
+        <tr><td>352</td><td>Critic-V: VLM Critics Help Catch VLM Errors in Multimodal Reasoning</td></tr>
+        <tr><td>353</td><td>Insight-V: Exploring Long-Chain Visual Reasoning with Multimodal Large Language Models</td></tr>
+        <tr><td>355</td><td>Unveiling the Ignorance of MLLMs: Seeing Clearly, Answering Incorrectly</td></tr>
+        <tr><td>362</td><td>UPME: An Unsupervised Peer Review Framework for Multimodal Large Language Model Evaluation</td></tr>
+        <tr><td>365</td><td>Augmenting Multimodal LLMs with Self-Reflective Tokens for Knowledge-based Visual Question Answering</td></tr>
+        <tr><td>374</td><td>Img-Diff: Contrastive Data Synthesis for Multimodal Large Language Models</td></tr>
+        <tr><td>375</td><td>CLIP Under the Microscope: A Fine-Grained Analysis of Multi-Object Representation</td></tr>
+        <tr><td>378</td><td>Your Large Vision-Language Model Only Needs A Few Attention Heads For Visual Grounding</td></tr>
+        <tr><td>380</td><td>SymDPO: Boosting In-Context Learning of Large Multimodal Models with Symbol Demonstration Direct Preference Optimization</td></tr>
+        <tr><td>382</td><td>Lifting the Veil on Visual Information Flow in MLLMs: Unlocking Pathways to Faster Inference</td></tr>
+        <tr><td>387</td><td>From Head to Tail: Towards Balanced Representation in Large Vision-Language Models through Adaptive Data Calibration</td></tr>
+        <tr><td>388</td><td>EfficientLLLaVA: Generalizable Auto-Pruning for Large Vision-Language Models</td></tr>
+        <tr><td>399</td><td>Domain Generalization in CLIP via Learning with Diverse Text Prompts</td></tr>
+        <tr><td>405</td><td>Perceptual Inductive Bias Is What You Need Before Contrastive Learning</td></tr>
+        <tr><td>407</td><td>Multimodal Autoregressive Pre-training of Large Vision Encoders</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <script>
+    // Simple tab switching logic
+    document.querySelectorAll('.tab-button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        // update active button
+        document.querySelectorAll('.tab-button').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        // update tab panels
+        const target = btn.dataset.tab;
+        document.querySelectorAll('.tab-content').forEach(p => p.classList.toggle('active', p.id === target));
+      });
+    });
+  </script>
+</body>
+</html>
