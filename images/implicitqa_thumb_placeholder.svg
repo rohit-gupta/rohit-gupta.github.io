@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="250" viewBox="0 0 400 250">
+  <rect width="400" height="250" fill="#ecfff1"/>
+  <rect x="8" y="8" width="384" height="234" fill="#cff5dc" stroke="#92d4aa" stroke-width="2"/>
+  <text x="200" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#2f7a4a">ImplicitQA</text>
+  <text x="200" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#2f7a4a">Placeholder Thumbnail</text>
+</svg>
